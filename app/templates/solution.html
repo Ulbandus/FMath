@@ -1,1 +1,8 @@
+<script type="text/javascript">
+	function isMobile() { return ('ontouchstart' in document.documentElement); }
+	if (isMobile()) {
+		window.location.replace("{{ file }}");
+	}
+</script>
+
 <embed src= "{{ file }}" width= "100%" height= "100%"  type="application/pdf" >
