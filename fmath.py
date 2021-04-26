@@ -53,13 +53,17 @@ def home():
 @app.route('/solution', methods=['POST', 'GET'])
 def solution():
     if request.method == 'POST':
-        file = request.files['file']
-        subject = request.form['subject']
-        exam = request.form['exam']
-        fmath = FMath(file, subject, exam)
-        fmath.test_id = fmath.read()
-        solution_path = fmath.solution()
-        fmath.exit()
+        try:
+            file = request.files['file']
+            subject = request.form['subject']
+            exam = request.form['exam']
+            fmath = FMath(file, subject, exam)
+            fmath.test_id = fmath.read()
+            solution_path = fmath.solution()
+            fmath.exit()
+        except Exception as errror:
+            print('!!!', errror)
+            return 'НЕПРАВИЛЬНЫЙ ФАЙЛ ИЛИ ПРЕДМЕТ!'
         return render_template('solution.html', file=solution_path)
 
 
