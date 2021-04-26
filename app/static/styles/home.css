@@ -35,12 +35,44 @@ body {
 }
 
 .btn {
-	width: 40%;
+	width: 43%;
 }
 
-.file-picker .btn-tertiary{color:#00AB4E;padding:0;line-height:40px;width:300px;margin:auto;display:block;border:2px solid #00AB4E}
-.file-picker .btn-tertiary:hover,.file-picker .btn-tertiary:focus{color:#00d662;border-color:#00d662}
-.file-picker .input-file{width:.1px;height:.1px;opacity:0;overflow:hidden;position:absolute;z-index:-1}
-.file-picker .input-file + .js-labelFile{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 10px;cursor:pointer}
-.file-picker .input-file + .js-labelFile .icon:before{content:"\f093"}
-.file-picker .input-file + .js-labelFile.has-file .icon:before{content:"\f00c";color:#00AB4E}
+
+.label-upload {
+	display: block;
+	width: 60vw;
+	max-width: 300px;
+	margin: 0 auto;
+	background-color: slateblue;
+	border-radius: 2px;
+	font-size: 1em;
+	line-height: 2.5em;
+	text-align: center;
+}
+
+.label-upload:hover {
+	background-color: cornflowerblue;
+}
+
+.label-upload:active {
+	background-color: mediumaquamarine;
+}
+
+.upload-input {
+	border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px; 
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.upload-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}

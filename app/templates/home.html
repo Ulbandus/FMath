@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../static/styles/home.css">
 	<!-- Title -->
 	<title>FMath</title>
@@ -78,13 +77,13 @@
   			</label>
   		</div>
 
-    <div class="form-group file-picker">
-      <input type="file" class="input-file" id="file" name="file" accept="application/pdf">
-      <label for="file" class="btn btn-tertiary js-labelFile">
-        <i class="icon fa fa-check"></i>
-        <span class="js-fileName">Загрузить файл</span>
-      </label>
+
+    <div class="upload-div">
+      <form method="post" enctype="multipart/form-data">
+      <label for="file" class="label-upload"><input type="file" name="file" id="file" class="upload-input" accept="application/pdf">Get file</label>
+    </form> 
     </div>
+    
 
 		<input type="submit" class="btn btn-outline-success  upload-button" value="Решить">
 	</form>
