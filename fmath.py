@@ -54,17 +54,14 @@ def home():
 @app.route('/solution', methods=['POST', 'GET'])
 def solution():
     if request.method == 'POST':
-        try:
-            file = request.files['file']
-            subject = request.form['subject']
-            exam = request.form['exam']
-            fmath = FMath(file, subject, exam)
-            fmath.test_id = fmath.read()
-            solution_path = fmath.solution()
-            fmath.exit()
-            return render_template('solution.html', file=solution_path)
-        except:
-            return 'Ошибка, был приложен файл НЕ экзамена или необычный формат!'
+        file = request.files['file']
+        subject = request.form['subject']
+        exam = request.form['exam']
+        fmath = FMath(file, subject, exam)
+        fmath.test_id = fmath.read()
+        solution_path = fmath.solution()
+        fmath.exit()
+        return render_template('solution.html', file=solution_path)
 
 
 app.run(port=environ.get('PORT', 5000), host='0.0.0.0')
