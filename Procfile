@@ -1,1 +1,1 @@
-web: python fmath.py
+web: python run.py
