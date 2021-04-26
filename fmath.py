@@ -63,6 +63,13 @@ def solution():
             fmath.exit()
         except Exception as errror:
             print('!!!', errror)
+            try:
+                mkdir('./temp')
+            except:
+                try:
+                    rmtree('./temp')
+                except:
+                    pass
             return 'НЕПРАВИЛЬНЫЙ ФАЙЛ ИЛИ ПРЕДМЕТ!'
         return render_template('solution.html', file=solution_path)
 
