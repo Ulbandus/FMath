@@ -1,0 +1,34 @@
+body {
+	background-color: black !important;
+	color: white !important;
+	margin: 0 auto !important;
+}
+
+.uploader {
+	background-color: black;
+	color: white;
+	display: block;
+	margin: 0 auto;
+	width: 90%;
+}
+
+.radio-buttons {
+	margin: 20px auto;
+    width: 90%;
+    display: block;
+    text-align: center;
+}
+
+.main-description {
+	text-align: center;
+	margin: 0 auto;
+	width: 90%;
+	margin-bottom: 60px;
+	margin-top: 20px;
+}
+
+.upload-button {
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+}

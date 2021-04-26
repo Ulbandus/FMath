@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<!-- Meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- CSS and Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+	<!-- Title -->
+	<title>FMath</title>
+</head>
+
+<body>
+	<!-- Main description -->
+	<div class="main-description">
+		<h1>
+			Устал прорешивать варианты ОГЭ/ЕГЭ?
+		</h1>
+	</div>
+	<!-- Data collection form -->
+	<form action="/solution" method="post" enctype=multipart/form-data>
+		<div class="btn-group btn-group-toggle radio-buttons" data-toggle="buttons">
+			<label class="btn btn-secondary active">
+				<input type="radio" name="subject" value="math" id="option1" autocomplete="off" checked> Математика
+			</label>
+  			<label class="btn btn-secondary">
+    			<input type="radio" name="subject" value="inf" id="option2" autocomplete="off"> Информатика
+  			</label>
+  			<label class="btn btn-secondary">
+    			<input type="radio" name="subject" value="phys" id="option3" autocomplete="off"> Физика
+  			</label>
+  			<label class="btn btn-secondary">
+    			<input type="radio" name="subject" value="rus" id="option3" autocomplete="off">Русский
+  			</label>
+  		</div>
+
+  		<div class="btn-group btn-group-toggle radio-buttons" data-toggle="buttons">
+			<label class="btn btn-secondary active">
+				<input type="radio" name="exam" value="oge" id="option1" autocomplete="off" checked> ОГЭ
+			</label>
+  			<label class="btn btn-secondary">
+    			<input type="radio" name="exam" value="ege" id="option2" autocomplete="off"> ЕГЭ
+  			</label>
+  		</div>
+
+		<input type="file" class="form-control uploader" id="file" name="file" accept="application/pdf">
+		<input type="submit" class="btn btn-outline-success  upload-button" value="Решить">
+	</form>
+</body>
+</html>
+
+
