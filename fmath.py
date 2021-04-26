@@ -17,7 +17,7 @@ class FMath:
 
         with open('./temp/file.pdf', 'wb') as pdf:
             pdf.write(file_stream.stream.read())
-        self.name = self.gen_name()
+        name = self.gen_name()
         self.pdf = fitz.open(f'./temp/{name}.pdf')
 
     def gen_name(self):
