@@ -2,6 +2,7 @@ body {
 	background-color: black !important;
 	color: white !important;
 	margin: 0 auto !important;
+	background-image: url(../images/background.png);
 }
 
 .uploader {
@@ -31,4 +32,8 @@ body {
 	display: block;
 	margin: 0 auto;
 	margin-top: 20px;
+}
+
+.btn {
+	width: 40%;
 }
