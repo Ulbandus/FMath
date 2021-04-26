@@ -14,10 +14,9 @@ class FMath:
         self.subject = subject
 
         mkdir('./temp')
-
-        with open('./temp/file.pdf', 'wb') as pdf:
-            pdf.write(file_stream.stream.read())
         name = self.gen_name()
+        with open(f'./temp/{name}.pdf', 'wb') as pdf:
+            pdf.write(file_stream.stream.read())
         self.pdf = fitz.open(f'./temp/{name}.pdf')
 
     def gen_name(self):
