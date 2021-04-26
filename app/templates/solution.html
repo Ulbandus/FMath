@@ -1,7 +1,14 @@
 <script type="text/javascript">
-	function isMobile() { return ('ontouchstart' in document.documentElement); }
+	function isMobile() { 
+		return ('ontouchstart' in document.documentElement);
+	}
+
 	if (isMobile()) {
 		window.location.replace("{{ file }}");
+		setTimeout(() => {
+			window.location.replace("");
+		}, 2000);
+		
 	}
 </script>
 
