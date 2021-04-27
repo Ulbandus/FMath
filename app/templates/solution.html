@@ -3,12 +3,9 @@
 		return ('ontouchstart' in document.documentElement);
 	}
 
-	var content = element.innerHTML;
 	if (isMobile()) {
-		var pdf = '<iframe src="https://docs.google.com/gview?url={{ file }}&embedded=true"></iframe>'
+		window.location.replace("http://docs.google.com  gview?embedded=true&url={{ file }}");	
 	}
-	else {
-		var pdf = '<embed src= "{{ file }}" width= "100%" height= "100%"  type="application/pdf">'
-	}
-	element.innerHTML = pdf;
 </script>
+
+<embed src= "{{ file }}" width= "100%" height= "100%"  type="application/pdf" frameborder="0">
