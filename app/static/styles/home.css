@@ -76,3 +76,9 @@ body {
 	align-items: center;
 	overflow: hidden;
 }
+
+.schedule {
+	margin-top: 20px;
+	width: 100%;
+	height: 1000px;
+}
